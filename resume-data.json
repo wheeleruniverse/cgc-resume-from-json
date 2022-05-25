@@ -1,0 +1,54 @@
+{
+    "employment":[
+        {
+            "employer":"Bravo LT",
+            "positions":[
+                {
+                    "startdate":"2021-04-01",
+                    "title":"Senior Software Developer Consultant"
+                }
+            ]
+        },
+        {
+            "employer":"Verizon",
+            "positions":[
+                {
+                    "enddate":"2021-04-01",
+                    "startdate":"2020-03-01",
+                    "title":"Cloud Architect"
+                },
+                {
+                    "enddate":"2020-03-01",
+                    "startdate":"2019-11-01",
+                    "title":"Full Stack Engineer"
+                },
+                {
+                    "enddate":"2019-11-01",
+                    "startdate":"2017-08-01",
+                    "title":"Java Software Engineer"
+                },
+                {
+                    "enddate":"2017-08-01",
+                    "startdate":"2016-10-01",
+                    "title":"Java Developer Contractor"
+                }
+            ]
+        }
+    ],
+    "groups":[
+        "A Cloud Guru Insider",
+        "AWS Community Builders"
+    ],
+    "name":"Justin Wheeler",
+    "social":{
+        "acloudguru":"https://learn.acloud.guru/profile/wheelerswebservices",
+        "blog":"https://dev.to/wheelerswebservices",
+        "coffee":"https://www.buymeacoffee.com/wheelersweb",
+        "email":"justin.wheeler@wheelerswebservices.com",
+        "github":"https://github.com/wheelerswebservices",
+        "linkedin":"https://www.linkedin.com/in/wheelerswebservices/",
+        "pluralsight":"https://app.pluralsight.com/profile/wheelerswebservices",
+        "tryhackme":"https://tryhackme.com/p/wheeler146",
+        "twitter":"https://twitter.com/wheelersweb"
+    }
+}
