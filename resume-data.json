@@ -1,10 +1,28 @@
 {
+    "about":"I am an ambitious technologist with vast knowledge in Cloud Computing and programming. I am fluent in multiple programming languages including Java and Python. I currently hold over a dozen industry certifications including the AWS Solutions Architect Professional. I have worked as both a Cloud Architect and a Senior Software Developer, but I prefer the former. I am an AWS Community Builder since October 2021 with a focus on Serverless. I dedicate countless time to studying so that I remain sharp. I am actively interested in AI, Blockchain, Game Development, ML, Quantum Computing, Robotics, and Kubernetes.",
+    "certifications":[
+        "AWS Advanced Networking Specialty",
+        "AWS Cloud Practitioner",
+        "AWS Data Analytics Specialty",
+        "AWS Database Specialty",
+        "AWS Developer Associate",
+        "AWS DevOps Engineer Professional",
+        "AWS Machine Learning Specialty",
+        "AWS SAP on AWS Specialty",
+        "AWS Security Specialty",
+        "AWS Solutions Architect Associate",
+        "AWS Solutions Architect Professional",
+        "AWS SysOps Administrator Associate",
+        "CNCF Kubernetes and Cloud Native Associate",
+        "GCP Cloud Digital Leader",
+        "Microsoft Azure Fundamentals"
+    ],
     "employment":[
         {
             "employer":"Bravo LT",
             "positions":[
                 {
-                    "startdate":"2021-04-01",
+                    "start":"2021-04-01",
                     "title":"Senior Software Developer Consultant"
                 }
             ]
@@ -13,42 +31,34 @@
             "employer":"Verizon",
             "positions":[
                 {
-                    "enddate":"2021-04-01",
-                    "startdate":"2020-03-01",
-                    "title":"Cloud Architect"
+                    "start":"2020-03-01",
+                    "title":"Cloud Architect",
+                    "until":"2021-04-01"
                 },
                 {
-                    "enddate":"2020-03-01",
-                    "startdate":"2019-11-01",
-                    "title":"Full Stack Engineer"
+                    "start":"2019-11-01",
+                    "title":"Full Stack Engineer",
+                    "until":"2020-03-01"
                 },
                 {
-                    "enddate":"2019-11-01",
-                    "startdate":"2017-08-01",
-                    "title":"Java Software Engineer"
+                    "start":"2017-08-01",
+                    "title":"Java Software Engineer",
+                    "until":"2019-11-01"
                 },
                 {
-                    "enddate":"2017-08-01",
-                    "startdate":"2016-10-01",
-                    "title":"Java Developer Contractor"
+                    "start":"2016-10-01",
+                    "title":"Java Developer Contractor",
+                    "until":"2017-08-01"
                 }
             ]
         }
     ],
     "groups":[
-        "A Cloud Guru Insider",
         "AWS Community Builders"
     ],
+    "location":"Grand Rapids, MI",
     "name":"Justin Wheeler",
-    "social":{
-        "acloudguru":"https://learn.acloud.guru/profile/wheelerswebservices",
-        "blog":"https://dev.to/wheelerswebservices",
-        "coffee":"https://www.buymeacoffee.com/wheelersweb",
-        "email":"justin.wheeler@wheelerswebservices.com",
-        "github":"https://github.com/wheelerswebservices",
-        "linkedin":"https://www.linkedin.com/in/wheelerswebservices/",
-        "pluralsight":"https://app.pluralsight.com/profile/wheelerswebservices",
-        "tryhackme":"https://tryhackme.com/p/wheeler146",
-        "twitter":"https://twitter.com/wheelersweb"
+    "urls":{
+        "linktree":"https://linktr.ee/wheeleruniverse"
     }
 }
