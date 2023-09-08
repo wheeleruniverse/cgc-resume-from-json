@@ -1,2 +1,2 @@
-# cgc-resume-from-json (#CloudGuruChallenge)
+# cgc-resume-from-json
 https://www.allhandsontech.com/programming/code-portfolio-challenge/
