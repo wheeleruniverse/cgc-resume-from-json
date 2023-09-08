@@ -1,2 +1,2 @@
-# ppc-resume-from-json (Pluralsight Portfolio Challenge)
+# cgc-resume-from-json (#CloudGuruChallenge)
 https://www.allhandsontech.com/programming/code-portfolio-challenge/
