@@ -1,0 +1,169 @@
+{
+  "about": "I am an ambitious technologist with vast knowledge in Cloud Computing and programming. I am fluent in multiple programming languages including Java and Python. I currently hold over a dozen industry certifications including the AWS Solutions Architect Professional. I have worked as both a Cloud Architect and a Senior Software Developer, but I prefer the former. I am an AWS Community Builder since October 2021 with a focus on Serverless. I dedicate countless time to studying so that I remain sharp. I am actively interested in AI, Blockchain, Game Development, ML, Quantum Computing, Robotics, and Kubernetes.",
+  "certifications": [
+    {
+      "expiry": "2025-05-04",
+      "id": "8DJLFE6CN2441GCQ",
+      "issue": "2020-07-07",
+      "level": "4 Professional",
+      "name": "DevOps Engineer Professional",
+      "vendor": "AWS"
+    },
+    {
+      "expiry": "2025-05-13",
+      "id": "F9T6LYBL2BF4QC50",
+      "issue": "2020-12-09",
+      "level": "4 Professional",
+      "name": "Solutions Architect Professional",
+      "vendor": "AWS"
+    },
+    {
+      "expiry": "2024-11-01",
+      "id": "28BC3BDJ3F4E16G4",
+      "issue": "2021-11-01",
+      "level": "3 Specialty",
+      "name": "Advanced Networking Specialty",
+      "vendor": "AWS"
+    },
+    {
+      "expiry": "2024-08-26",
+      "id": "L622V9QJEJ41135K",
+      "issue": "2021-08-26",
+      "level": "3 Specialty",
+      "name": "Data Analytics Specialty",
+      "vendor": "AWS"
+    },
+    {
+      "expiry": "2025-03-23",
+      "id": "9GLXQ97C32QQ1699",
+      "issue": "2020-01-03",
+      "level": "3 Specialty",
+      "name": "Database Specialty",
+      "vendor": "AWS"
+    },
+    {
+      "expiry": "2025-03-07",
+      "id": "EH1KSN0BEFEQ15K6",
+      "issue": "2022-03-07",
+      "level": "3 Specialty",
+      "name": "Machine Learning Specialty",
+      "vendor": "AWS"
+    },
+    {
+      "expiry": "2025-05-19",
+      "id": "BE4LVD0DHNEQ10WL",
+      "issue": "2022-05-19",
+      "level": "3 Specialty",
+      "name": "SAP on AWS Specialty",
+      "vendor": "AWS"
+    },
+    {
+      "expiry": "2025-03-17",
+      "id": "KX5PP7EKG2V11WSR",
+      "issue": "2019-10-17",
+      "level": "3 Specialty",
+      "name": "Security Specialty",
+      "vendor": "AWS"
+    },
+    {
+      "expiry": "2025-05-04",
+      "id": "KNVXP1W2LFF4QFKS",
+      "issue": "2018-06-05",
+      "level": "2 Associate",
+      "name": "Developer Associate",
+      "vendor": "AWS"
+    },
+    {
+      "expiry": "2025-05-13",
+      "id": "6JGG02H2CJREQFC8",
+      "issue": "2018-01-03",
+      "level": "2 Associate",
+      "name": "Solutions Architect Associate",
+      "vendor": "AWS"
+    },
+    {
+      "expiry": "2025-05-04",
+      "id": "K591NJZ222R1QFWL",
+      "issue": "2018-12-27",
+      "level": "2 Associate",
+      "name": "SysOps Administrator Associate",
+      "vendor": "AWS"
+    },
+    {
+      "expiry": "2025-05-13",
+      "id": "R9P1ZDJC2BEE1LS4",
+      "issue": "2018-12-19",
+      "level": "1 Foundational",
+      "name": "Cloud Practitioner",
+      "vendor": "AWS"
+    },
+    {
+      "expiry": "2025-11-12",
+      "id": "LF-am8711ob2h",
+      "issue": "2022-11-12",
+      "level": "1 Foundational",
+      "name": "Kubernetes and Cloud Native Associate",
+      "vendor": "CNCF"
+    },
+    {
+      "expiry": "2024-06-25",
+      "id": "o4fJ0h",
+      "issue": "2021-06-25",
+      "level": "1 Foundational",
+      "name": "Cloud Digital Leader",
+      "vendor": "GCP"
+    },
+    {
+      "expiry": null,
+      "id": "H478-5093",
+      "issue": "2020-01-30",
+      "level": "1 Foundational",
+      "name": "Azure Fundamentals",
+      "vendor": "Microsoft"
+    }
+  ],
+  "employment": [
+    {
+      "employer": "Bravo LT",
+      "positions": [
+        {
+          "start": "2021-04-01",
+          "title": "Senior Software Developer Consultant"
+        }
+      ]
+    },
+    {
+      "employer": "Verizon",
+      "positions": [
+        {
+          "start": "2020-03-01",
+          "title": "Cloud Architect",
+          "until": "2021-04-01"
+        },
+        {
+          "start": "2019-11-01",
+          "title": "Full Stack Engineer",
+          "until": "2020-03-01"
+        },
+        {
+          "start": "2017-08-01",
+          "title": "Java Software Engineer",
+          "until": "2019-11-01"
+        },
+        {
+          "start": "2016-10-01",
+          "title": "Java Developer Contractor",
+          "until": "2017-08-01"
+        }
+      ]
+    }
+  ],
+  "groups": [
+    "AWS Community Builders"
+  ],
+  "location": "Grand Rapids, MI",
+  "name": "Justin Wheeler",
+  "urls": {
+    "linktree": "https://linktr.ee/wheeleruniverse"
+  }
+}

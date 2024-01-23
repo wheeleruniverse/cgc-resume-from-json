@@ -1,0 +1,34 @@
+﻿@page "/certifications"
+@inject HttpClient Http
+
+<PageTitle>Certifications</PageTitle>
+
+<table class="table">
+    <thead>
+    <tr>
+        <th>Vendor</th>
+        <th>Level</th>
+        <th>Name</th>
+        <th>Id</th>
+        <th>Issue Date</th>
+        <th>Expiry Date</th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var certification in Resume.Certifications)
+    {
+        <tr>
+            <td>@certification.Vendor</td>
+            <td>@certification.Level</td>
+            <td>@certification.Name</td>
+            <td>@certification.Id</td>
+            <td>@certification.Issue</td>
+            <td>@certification.Expiry</td>
+        </tr>
+    }
+    </tbody>
+</table>
+
+@code {
+    [CascadingParameter] public MainLayout.Resume Resume { get; set; } = null!;
+}

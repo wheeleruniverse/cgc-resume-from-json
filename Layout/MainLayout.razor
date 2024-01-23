@@ -1,16 +1,61 @@
 ﻿@inherits LayoutComponentBase
-<div class="page">
-    <div class="sidebar">
-        <NavMenu />
-    </div>
+@inject HttpClient Http
 
-    <main>
-        <div class="top-row px-4">
-            <a href="https://learn.microsoft.com/aspnet/core/" target="_blank">About</a>
+@if (resume == null)
+{
+    <h1>Loading...</h1>
+}
+else
+{
+    <div class="page">
+        <div class="sidebar">
+            <NavMenu/>
         </div>
 
-        <article class="content px-4">
-            @Body
-        </article>
-    </main>
-</div>
+        <main>
+            <div class="top-row px-4">
+                <a href="https://github.com/wheeleruniverse/cgc-resume-from-json" target="_blank">GitHub</a>
+            </div>
+
+            <article class="content px-4">
+                <CascadingValue Value="@resume">
+                    @Body
+                </CascadingValue>
+            </article>
+        </main>
+    </div>
+}
+
+@code {
+    private Resume? resume;
+
+    protected override async Task OnInitializedAsync()
+    {
+        resume = await Http.GetFromJsonAsync<Resume>("data/wheeler-resume.json");
+    }
+
+    public class Resume
+    {
+        public string About { get; set; }
+
+        public ResumeCertification[] Certifications { get; set; }
+
+        public string Name { get; set; }
+    }
+
+    public class ResumeCertification
+    {
+        public string Expiry { get; set; }
+
+        public string Id { get; set; }
+
+        public string Issue { get; set; }
+
+        public string Level { get; set; }
+
+        public string Name { get; set; }
+
+        public string Vendor { get; set; }
+    }
+
+}

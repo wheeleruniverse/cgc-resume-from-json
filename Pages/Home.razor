@@ -1,7 +1,11 @@
 ﻿@page "/"
 
-<PageTitle>Home</PageTitle>
+<PageTitle>@Resume.Name</PageTitle>
 
-<h1>Hello, world!</h1>
+<h1>@Resume.Name</h1>
 
-Welcome to your new app.
+<p>@Resume.About</p>
+
+@code {
+    [CascadingParameter] public MainLayout.Resume Resume { get; set; } = null!;
+}
