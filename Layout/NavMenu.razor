@@ -1,6 +1,6 @@
 ﻿<div class="top-row ps-3 navbar navbar-dark">
     <div class="container-fluid">
-        <a class="navbar-brand" href="">Your Resume</a>
+        <a class="navbar-brand" href="">Json2Resume</a>
         <button title="Navigation Menu" class="navbar-toggler" @onclick="ToggleNavMenu">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -14,7 +14,7 @@
                 <span class="bi bi-house-door-fill-nav-menu" aria-hidden="true"></span> @Resume.Name
             </NavLink>
         </div>
-        
+
         @if (Resume.Certifications != null)
         {
             <div class="nav-item px-3">
@@ -27,6 +27,7 @@
 </div>
 
 @code {
+
     [Parameter]
     public MainLayout.Resume Resume { get; set; } = null!;
 

@@ -1,7 +1,8 @@
-﻿@inherits LayoutComponentBase
+﻿@using Newtonsoft.Json
+@inherits LayoutComponentBase
 @inject HttpClient Http
 
-@if (resume == null)
+@if (_resume == null)
 {
     <h1>Loading...</h1>
 }
@@ -9,29 +10,46 @@ else
 {
     <div class="page">
         <div class="sidebar">
-            <NavMenu Resume="@resume"/>
+            <NavMenu Resume="@_resume"/>
         </div>
 
         <main>
             <div class="top-row px-4">
+                <div>
+                    <span>Import Your Resume&nbsp; &nbsp;</span>
+                    <InputFile OnChange="@UpdateResume"/>
+                </div>
                 <a href="https://github.com/wheeleruniverse/cgc-resume-from-json" target="_blank">GitHub</a>
             </div>
 
             <article class="content px-4">
-                <CascadingValue Value="@resume">
+                <CascadingValue Value="@_resume">
                     @Body
                 </CascadingValue>
+
             </article>
         </main>
     </div>
 }
 
 @code {
-    private Resume? resume;
+    private Resume? _resume;
 
     protected override async Task OnInitializedAsync()
     {
-        resume = await Http.GetFromJsonAsync<Resume>("data/wheeler-resume.json");
+        _resume = await Http.GetFromJsonAsync<Resume>("data/wheeler-resume.json");
+    }
+
+    private async void UpdateResume(InputFileChangeEventArgs e)
+    {
+        var file = e.File;
+        var buffer = new byte[file.Size];
+        await file.OpenReadStream().ReadAsync(buffer);
+
+        var content = System.Text.Encoding.UTF8.GetString(buffer);
+        _resume = JsonConvert.DeserializeObject<MainLayout.Resume>(content);
+        
+        StateHasChanged();
     }
 
     public class Resume
@@ -65,7 +83,7 @@ else
     public class ResumeGroup
     {
         public string Description { get; set; } = "Unknown";
-        
+
         public string Name { get; set; } = "Unknown";
 
         public string Link { get; set; } = "https://example.com/";
