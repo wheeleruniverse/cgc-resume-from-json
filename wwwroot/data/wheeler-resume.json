@@ -6,6 +6,7 @@
       "id": "8DJLFE6CN2441GCQ",
       "issue": "2020-07-07",
       "level": "4 Professional",
+      "link": "https://aws.amazon.com/certification/certified-devops-engineer-professional",
       "name": "DevOps Engineer Professional",
       "vendor": "AWS"
     },
@@ -14,6 +15,7 @@
       "id": "F9T6LYBL2BF4QC50",
       "issue": "2020-12-09",
       "level": "4 Professional",
+      "link": "https://aws.amazon.com/certification/certified-solutions-architect-professional",
       "name": "Solutions Architect Professional",
       "vendor": "AWS"
     },
@@ -22,6 +24,7 @@
       "id": "28BC3BDJ3F4E16G4",
       "issue": "2021-11-01",
       "level": "3 Specialty",
+      "link": "https://aws.amazon.com/certification/certified-advanced-networking-specialty",
       "name": "Advanced Networking Specialty",
       "vendor": "AWS"
     },
@@ -30,6 +33,7 @@
       "id": "L622V9QJEJ41135K",
       "issue": "2021-08-26",
       "level": "3 Specialty",
+      "link": "https://aws.amazon.com/certification/certified-data-analytics-specialty",
       "name": "Data Analytics Specialty",
       "vendor": "AWS"
     },
@@ -38,6 +42,7 @@
       "id": "9GLXQ97C32QQ1699",
       "issue": "2020-01-03",
       "level": "3 Specialty",
+      "link": "https://aws.amazon.com/certification/certified-database-specialty",
       "name": "Database Specialty",
       "vendor": "AWS"
     },
@@ -46,6 +51,7 @@
       "id": "EH1KSN0BEFEQ15K6",
       "issue": "2022-03-07",
       "level": "3 Specialty",
+      "link": "https://aws.amazon.com/certification/certified-machine-learning-specialty",
       "name": "Machine Learning Specialty",
       "vendor": "AWS"
     },
@@ -54,6 +60,7 @@
       "id": "BE4LVD0DHNEQ10WL",
       "issue": "2022-05-19",
       "level": "3 Specialty",
+      "link": "https://aws.amazon.com/certification/certified-sap-on-aws-specialty",
       "name": "SAP on AWS Specialty",
       "vendor": "AWS"
     },
@@ -62,6 +69,7 @@
       "id": "KX5PP7EKG2V11WSR",
       "issue": "2019-10-17",
       "level": "3 Specialty",
+      "link": "https://aws.amazon.com/certification/certified-security-specialty",
       "name": "Security Specialty",
       "vendor": "AWS"
     },
@@ -70,6 +78,7 @@
       "id": "KNVXP1W2LFF4QFKS",
       "issue": "2018-06-05",
       "level": "2 Associate",
+      "link": "https://aws.amazon.com/certification/certified-developer-associate",
       "name": "Developer Associate",
       "vendor": "AWS"
     },
@@ -78,6 +87,7 @@
       "id": "6JGG02H2CJREQFC8",
       "issue": "2018-01-03",
       "level": "2 Associate",
+      "link": "https://aws.amazon.com/certification/certified-solutions-architect-associate",
       "name": "Solutions Architect Associate",
       "vendor": "AWS"
     },
@@ -86,6 +96,7 @@
       "id": "K591NJZ222R1QFWL",
       "issue": "2018-12-27",
       "level": "2 Associate",
+      "link": "https://aws.amazon.com/certification/certified-sysops-admin-associate",
       "name": "SysOps Administrator Associate",
       "vendor": "AWS"
     },
@@ -94,6 +105,7 @@
       "id": "R9P1ZDJC2BEE1LS4",
       "issue": "2018-12-19",
       "level": "1 Foundational",
+      "link": "https://aws.amazon.com/certification/certified-cloud-practitioner",
       "name": "Cloud Practitioner",
       "vendor": "AWS"
     },
@@ -102,6 +114,7 @@
       "id": "LF-am8711ob2h",
       "issue": "2022-11-12",
       "level": "1 Foundational",
+      "link": "https://training.linuxfoundation.org/certification/kubernetes-cloud-native-associate/",
       "name": "Kubernetes and Cloud Native Associate",
       "vendor": "CNCF"
     },
@@ -110,6 +123,7 @@
       "id": "o4fJ0h",
       "issue": "2021-06-25",
       "level": "1 Foundational",
+      "link": "https://cloud.google.com/learn/certification/cloud-digital-leader",
       "name": "Cloud Digital Leader",
       "vendor": "GCP"
     },
@@ -118,6 +132,7 @@
       "id": "H478-5093",
       "issue": "2020-01-30",
       "level": "1 Foundational",
+      "link": "https://learn.microsoft.com/en-us/credentials/certifications/azure-fundamentals",
       "name": "Azure Fundamentals",
       "vendor": "Microsoft"
     }
@@ -159,7 +174,21 @@
     }
   ],
   "groups": [
-    "AWS Community Builders"
+    {
+      "description": "The AWS Community Builders program offers technical resources, education, and networking opportunities to AWS technical enthusiasts and emerging thought leaders who are passionate about sharing knowledge and connecting with the technical community.",
+      "name": "AWS Community Builder",
+      "link": "https://aws.amazon.com/developer/community/community-builders/"
+    },
+    {
+      "description": "With the rapid adoption of AWS among developers, startups, and enterprises, communities have organically organized over 400 AWS-focused user groups around the world. User groups are peer-to-peer communities which meet regularly to share ideas, answer questions, and learn about new services and best practices.",
+      "name": "AWS User Group Leader",
+      "link": "https://www.meetup.com/west-michigan-aws-users-group/"
+    },
+    {
+      "description": "Virtual Coffee is a tech community where friendships are formed and support is given to people at all stages of their journey. Join our laid-back twice-weekly conversations and our online events to connect with people who share your passion for technology.",
+      "name": "Virtual Coffee Member",
+      "link": "https://virtualcoffee.io/"
+    }
   ],
   "location": "Grand Rapids, MI",
   "name": "Justin Wheeler",

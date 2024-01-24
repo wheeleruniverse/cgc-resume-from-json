@@ -1,0 +1,72 @@
+
+.about-container hr {
+    margin: 24px 0 48px;
+}
+
+.groups-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.group-block {
+    width: 100%;
+}
+
+.group-block:nth-child(even) .group {
+    border-left: 1px solid #102060;
+    float: right;
+    margin: 32px 0;
+}
+
+.group-block:nth-child(odd) .group {
+    border-right: 1px solid #102060;
+}
+
+.group {
+    border-bottom: 1px solid #102060;
+    cursor: pointer;
+    padding: 8px;
+    width: 50%;
+}
+
+.group:hover {
+    background-color: #cfd2df;
+}
+
+.group a {
+    color: unset;
+    text-decoration: none;
+}
+
+.group-name {
+    color: #102060;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.text-block {
+    line-height: 2;
+}
+
+.user-name {
+    color: #102060;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+@media (max-width: 641px) {
+    .group {
+        border: none !important;
+        padding: 0;
+        width: 100%;
+    }
+    
+    .group-name {
+        font-size: 20px;
+        text-align: center;
+    }
+    
+    .text-block {
+        line-height: 1.5;
+    }
+}

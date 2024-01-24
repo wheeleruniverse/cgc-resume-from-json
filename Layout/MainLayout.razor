@@ -9,7 +9,7 @@ else
 {
     <div class="page">
         <div class="sidebar">
-            <NavMenu/>
+            <NavMenu Resume="@resume"/>
         </div>
 
         <main>
@@ -36,26 +36,39 @@ else
 
     public class Resume
     {
-        public string About { get; set; }
+        public string? About { get; set; }
 
-        public ResumeCertification[] Certifications { get; set; }
+        public ResumeCertification[]? Certifications { get; set; }
 
-        public string Name { get; set; }
+        public ResumeGroup[]? Groups { get; set; }
+
+        public string Name { get; set; } = "Unknown";
     }
 
     public class ResumeCertification
     {
-        public string Expiry { get; set; }
+        public string? Expiry { get; set; }
 
-        public string Id { get; set; }
+        public string Id { get; set; } = "Unknown";
 
-        public string Issue { get; set; }
+        public string Issue { get; set; } = "Unknown";
 
-        public string Level { get; set; }
+        public string Level { get; set; } = "Unknown";
 
-        public string Name { get; set; }
+        public string Link { get; set; } = "https://example.com/";
 
-        public string Vendor { get; set; }
+        public string Name { get; set; } = "Unknown";
+
+        public string Vendor { get; set; } = "Unknown";
+    }
+
+    public class ResumeGroup
+    {
+        public string Description { get; set; } = "Unknown";
+        
+        public string Name { get; set; } = "Unknown";
+
+        public string Link { get; set; } = "https://example.com/";
     }
 
 }

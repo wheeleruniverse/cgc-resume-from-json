@@ -2,10 +2,37 @@
 
 <PageTitle>@Resume.Name</PageTitle>
 
-<h1>@Resume.Name</h1>
+<div class="user-name">@Resume.Name</div>
 
-<p>@Resume.About</p>
+@if (Resume.About != null)
+{
+    <div class="about-container">
+        <span class="text-block">@Resume.About</span>
+        <hr/>
+    </div>
+}
+
+@if (Resume.Groups != null)
+{
+    <div class="groups-container">
+        @foreach (var group in Resume.Groups)
+        {
+            <div class="group-block">
+                <div class="group">
+                    <a href="@group.Link" target="_blank">
+                        <span class="group-name">@group.Name</span>
+                        <div class="text-block">@group.Description</div>
+                    </a>
+                </div>
+            </div>
+        }
+    </div>
+}
+
 
 @code {
-    [CascadingParameter] public MainLayout.Resume Resume { get; set; } = null!;
+
+    [CascadingParameter]
+    public MainLayout.Resume Resume { get; set; } = null!;
+
 }

@@ -1,0 +1,9 @@
+
+.table th {
+    color: #102060;
+}
+
+.table tbody tr:hover {
+    background-color: #efefef;
+    cursor: pointer;
+}

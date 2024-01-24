@@ -1,5 +1,5 @@
 ﻿@page "/certifications"
-@inject HttpClient Http
+@inject IJSRuntime JsRuntime
 
 <PageTitle>Certifications</PageTitle>
 
@@ -15,9 +15,9 @@
     </tr>
     </thead>
     <tbody>
-    @foreach (var certification in Resume.Certifications)
+    @foreach (var certification in Resume.Certifications ?? [])
     {
-        <tr>
+        <tr @onclick="_ => ClickCertification(certification.Link)">
             <td>@certification.Vendor</td>
             <td>@certification.Level</td>
             <td>@certification.Name</td>
@@ -30,5 +30,13 @@
 </table>
 
 @code {
-    [CascadingParameter] public MainLayout.Resume Resume { get; set; } = null!;
+
+    [CascadingParameter]
+    public MainLayout.Resume Resume { get; set; } = null!;
+
+    private async void ClickCertification(string link)
+    {
+        await JsRuntime.InvokeAsync<object>("open", link, "_blank");
+    }
+
 }
