@@ -15,9 +15,12 @@ else
 
         <main>
             <div class="top-row px-4">
-                <div>
-                    <span>Import Your Resume&nbsp; &nbsp;</span>
-                    <InputFile OnChange="@UpdateResume"/>
+                <div class="import">
+                    <a href="data/wheeler-resume.json" download>Download Template</a>
+                    <label class="btn-link">
+                        <InputFile OnChange="@UpdateResume" class="d-none"/>
+                        Import Your Resume
+                    </label>
                 </div>
                 <a href="https://github.com/wheeleruniverse/cgc-resume-from-json" target="_blank">GitHub</a>
             </div>
@@ -26,8 +29,11 @@ else
                 <CascadingValue Value="@_resume">
                     @Body
                 </CascadingValue>
-
             </article>
+            
+            <div class="bottom-row px-4">
+                
+            </div>
         </main>
     </div>
 }
@@ -48,7 +54,7 @@ else
 
         var content = System.Text.Encoding.UTF8.GetString(buffer);
         _resume = JsonConvert.DeserializeObject<MainLayout.Resume>(content);
-        
+
         StateHasChanged();
     }
 
@@ -57,6 +63,8 @@ else
         public string? About { get; set; }
 
         public ResumeCertification[]? Certifications { get; set; }
+
+        public ResumeExperience[]? Experience { get; set; }
 
         public ResumeGroup[]? Groups { get; set; }
 
@@ -78,6 +86,21 @@ else
         public string Name { get; set; } = "Unknown";
 
         public string Vendor { get; set; } = "Unknown";
+    }
+
+    public class ResumeExperience
+    {
+        public string Employer { get; set; } = "Unknown";
+
+        public string Description { get; set; } = "Unknown";
+
+        public string Link { get; set; } = "https://example.com/";
+
+        public string Start { get; set; } = "Unknown";
+
+        public string Title { get; set; } = "Unknown";
+
+        public string? Until { get; set; }
     }
 
     public class ResumeGroup

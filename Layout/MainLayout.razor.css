@@ -12,16 +12,24 @@ main {
     background-image: linear-gradient(180deg, rgb(5, 39, 103) 0%, #3a0647 70%);
 }
 
-.top-row {
+.bottom-row, .top-row {
     align-items: center;
     background-color: #f7f7f7;
-    border-bottom: 1px solid #d6d5d5;
     display: flex;
     height: 3.5rem;
     justify-content: space-between;
 }
 
+.bottom-row {
+    border-top: 1px solid #d6d5d5;
+}
+
+.top-row {
+    border-bottom: 1px solid #d6d5d5;
+}
+
 .top-row ::deep a, .top-row ::deep .btn-link {
+    cursor: pointer;
     white-space: nowrap;
     margin-left: 1.5rem;
     text-decoration: none;
@@ -37,7 +45,7 @@ main {
 }
 
 @media (max-width: 640.98px) {
-    .top-row {
+    .bottom-row, .top-row {
         justify-content: space-between;
     }
 
@@ -47,6 +55,12 @@ main {
 }
 
 @media (min-width: 641px) {
+    .bottom-row {
+        position: sticky;
+        bottom: 0;
+        z-index: 1;
+    }
+
     .page {
         flex-direction: row;
     }

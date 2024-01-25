@@ -137,40 +137,54 @@
       "vendor": "Microsoft"
     }
   ],
-  "employment": [
+  "experience": [
     {
       "employer": "Bravo LT",
-      "positions": [
-        {
-          "start": "2021-04-01",
-          "title": "Senior Software Developer Consultant"
-        }
-      ]
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed lorem auctor, ullamcorper diam id, tempor tellus. Curabitur hendrerit quis purus sit amet tristique. Fusce urna orci, elementum in ex quis, mattis tempor erat. Proin in pretium dui, eget iaculis turpis. Pellentesque fermentum laoreet nulla, at tempus dui rhoncus ut. Vivamus commodo varius semper. Duis fermentum ante id auctor sodales.",
+      "link": "https://www.bravolt.com/",
+      "start": "2021-04-01",
+      "title": "Senior Software Developer Consultant",
+      "until": null
     },
     {
       "employer": "Verizon",
-      "positions": [
-        {
-          "start": "2020-03-01",
-          "title": "Cloud Architect",
-          "until": "2021-04-01"
-        },
-        {
-          "start": "2019-11-01",
-          "title": "Full Stack Engineer",
-          "until": "2020-03-01"
-        },
-        {
-          "start": "2017-08-01",
-          "title": "Java Software Engineer",
-          "until": "2019-11-01"
-        },
-        {
-          "start": "2016-10-01",
-          "title": "Java Developer Contractor",
-          "until": "2017-08-01"
-        }
-      ]
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed lorem auctor, ullamcorper diam id, tempor tellus. Curabitur hendrerit quis purus sit amet tristique. Fusce urna orci, elementum in ex quis, mattis tempor erat. Proin in pretium dui, eget iaculis turpis. Pellentesque fermentum laoreet nulla, at tempus dui rhoncus ut. Vivamus commodo varius semper. Duis fermentum ante id auctor sodales.",
+      "link": "https://www.verizon.com/",
+      "start": "2020-03-01",
+      "title": "Cloud Architect",
+      "until": "2021-04-01"
+    },
+    {
+      "employer": "Verizon",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed lorem auctor, ullamcorper diam id, tempor tellus. Curabitur hendrerit quis purus sit amet tristique. Fusce urna orci, elementum in ex quis, mattis tempor erat. Proin in pretium dui, eget iaculis turpis. Pellentesque fermentum laoreet nulla, at tempus dui rhoncus ut. Vivamus commodo varius semper. Duis fermentum ante id auctor sodales.",
+      "link": "https://www.verizon.com/",
+      "start": "2020-03-01",
+      "title": "Cloud Architect",
+      "until": "2021-04-01"
+    },
+    {
+      "employer": "Verizon",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed lorem auctor, ullamcorper diam id, tempor tellus. Curabitur hendrerit quis purus sit amet tristique. Fusce urna orci, elementum in ex quis, mattis tempor erat. Proin in pretium dui, eget iaculis turpis. Pellentesque fermentum laoreet nulla, at tempus dui rhoncus ut. Vivamus commodo varius semper. Duis fermentum ante id auctor sodales.",
+      "link": "https://www.verizon.com/",
+      "start": "2019-11-01",
+      "title": "Full Stack Engineer",
+      "until": "2020-03-01"
+    },
+    {
+      "employer": "Verizon",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed lorem auctor, ullamcorper diam id, tempor tellus. Curabitur hendrerit quis purus sit amet tristique. Fusce urna orci, elementum in ex quis, mattis tempor erat. Proin in pretium dui, eget iaculis turpis. Pellentesque fermentum laoreet nulla, at tempus dui rhoncus ut. Vivamus commodo varius semper. Duis fermentum ante id auctor sodales.",
+      "link": "https://www.verizon.com/",
+      "start": "2017-08-01",
+      "title": "Java Software Engineer",
+      "until": "2019-11-01"
+    },
+    {
+      "employer": "Verizon",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed lorem auctor, ullamcorper diam id, tempor tellus. Curabitur hendrerit quis purus sit amet tristique. Fusce urna orci, elementum in ex quis, mattis tempor erat. Proin in pretium dui, eget iaculis turpis. Pellentesque fermentum laoreet nulla, at tempus dui rhoncus ut. Vivamus commodo varius semper. Duis fermentum ante id auctor sodales.",
+      "link": "https://www.verizon.com/",
+      "start": "2016-10-01",
+      "title": "Java Developer Contractor",
+      "until": "2017-08-01"
     }
   ],
   "groups": [
@@ -178,6 +192,11 @@
       "description": "The AWS Community Builders program offers technical resources, education, and networking opportunities to AWS technical enthusiasts and emerging thought leaders who are passionate about sharing knowledge and connecting with the technical community.",
       "name": "AWS Community Builder",
       "link": "https://aws.amazon.com/developer/community/community-builders/"
+    },
+    {
+      "description": "AWS customers share their thoughts about our products and features as members of our customer council. We’re curious and want to learn from you!",
+      "name": "AWS Customer Council Member",
+      "link": "https://aws.amazon.com/customer-council/"
     },
     {
       "description": "With the rapid adoption of AWS among developers, startups, and enterprises, communities have organically organized over 400 AWS-focused user groups around the world. User groups are peer-to-peer communities which meet regularly to share ideas, answer questions, and learn about new services and best practices.",

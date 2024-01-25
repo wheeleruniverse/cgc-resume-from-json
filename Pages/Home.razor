@@ -1,8 +1,7 @@
 ﻿@page "/"
 
 <PageTitle>@Resume.Name</PageTitle>
-
-<div class="user-name">@Resume.Name</div>
+<a class="block-header resume-name" href="#">@Resume.Name</a>
 
 @if (Resume.About != null)
 {
@@ -12,23 +11,59 @@
     </div>
 }
 
-@if (Resume.Groups != null)
+@if (Resume.Experience != null)
 {
-    <div class="groups-container">
-        @foreach (var group in Resume.Groups)
-        {
-            <div class="group-block">
-                <div class="group">
-                    <a href="@group.Link" target="_blank">
-                        <span class="group-name">@group.Name</span>
-                        <div class="text-block">@group.Description</div>
-                    </a>
+    <div id="experience">
+        <a class="block-header" href="#experience">Experience</a>
+        <div class="block-container">
+            @foreach (var entry in Resume.Experience)
+            {
+                <div class="block-wrapper">
+                    <div class="block">
+                        <a href="@entry.Link" target="_blank">
+                            <span class="block-name">
+                                @entry.Employer
+                            </span>
+                            <div class="position-name">
+                                <span>@entry.Title</span>
+                                @if (entry.Until != null)
+                                {
+                                    <span>@entry.Start &ndash; @entry.Until</span>
+                                }
+                                else
+                                {
+                                    <span>@entry.Start</span>
+                                }
+                            </div>
+                            <div class="text-block">@entry.Description</div>
+                        </a>
+                    </div>
                 </div>
-            </div>
-        }
+            }
+        </div>
     </div>
+    <hr/>
 }
 
+@if (Resume.Groups != null)
+{
+    <div id="groups">
+        <a class="block-header" href="#groups">Groups</a>
+        <div class="block-container">
+            @foreach (var group in Resume.Groups)
+            {
+                <div class="block-wrapper">
+                    <div class="block">
+                        <a href="@group.Link" target="_blank">
+                            <span class="block-name">@group.Name</span>
+                            <div class="text-block">@group.Description</div>
+                        </a>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+}
 
 @code {
 

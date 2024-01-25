@@ -1,71 +1,108 @@
 
-.about-container hr {
-    margin: 24px 0 48px;
+hr {
+    margin: 24px 0 32px;
 }
 
-.groups-container {
-    display: flex;
-    flex-direction: column;
-}
-
-.group-block {
-    width: 100%;
-}
-
-.group-block:nth-child(even) .group {
-    border-left: 1px solid #102060;
-    float: right;
-    margin: 32px 0;
-}
-
-.group-block:nth-child(odd) .group {
-    border-right: 1px solid #102060;
-}
-
-.group {
+.block {
+    background-color: white;
     border-bottom: 1px solid #102060;
     cursor: pointer;
     padding: 8px;
     width: 50%;
 }
 
-.group:hover {
+.block:hover {
     background-color: #cfd2df;
 }
 
-.group a {
+.block a {
     color: unset;
     text-decoration: none;
 }
 
-.group-name {
+.block-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.block-header {
+    color: #102060;
+    font-size: 56px;
+    padding: 16px;
+    position: absolute;
+    text-decoration: none;
+}
+
+.block-header:hover {
+    background-color: #cfd2df;
+    border-radius: 16px;
+}
+
+.block-name {
     color: #102060;
     font-size: 24px;
     font-weight: bold;
+}
+
+.block-wrapper {
+    width: 100%;
+}
+
+#experience .block-header {
+    right: 5%;
+}
+
+#experience .block-wrapper:nth-child(even) .block {
+    border-left: 1px solid #102060;
+    float: right;
+    margin: 32px 0;
+}
+
+#experience .block-wrapper:nth-child(odd) .block {
+    border-right: 1px solid #102060;
+}
+
+#groups .block-header {
+    left: 25%;
+}
+
+#groups .block-wrapper:nth-child(even) .block {
+    border-right: 1px solid #102060;
+}
+
+#groups .block-wrapper:nth-child(odd) .block {
+    border-left: 1px solid #102060;
+    float: right;
+    margin: 32px 0;
+}
+
+.position-name {
+    color: #3f4c7f;
+    display: flex;
+    font-weight: bold;
+    justify-content: space-between;
+}
+
+.resume-name {
+    position: unset;
 }
 
 .text-block {
     line-height: 2;
 }
 
-.user-name {
-    color: #102060;
-    font-size: 28px;
-    font-weight: bold;
-}
-
 @media (max-width: 641px) {
-    .group {
+    .block {
         border: none !important;
         padding: 0;
         width: 100%;
     }
-    
-    .group-name {
+
+    .block-name {
         font-size: 20px;
         text-align: center;
     }
-    
+
     .text-block {
         line-height: 1.5;
     }
