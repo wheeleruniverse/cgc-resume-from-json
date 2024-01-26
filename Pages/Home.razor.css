@@ -1,8 +1,4 @@
 
-hr {
-    margin: 24px 0 32px;
-}
-
 .block {
     background-color: white;
     border-bottom: 1px solid #102060;
@@ -76,6 +72,10 @@ hr {
     margin: 32px 0;
 }
 
+hr {
+    margin: 24px 0 32px;
+}
+
 .location {
     color: #3f4c7f;
     padding: 8px;
@@ -115,11 +115,39 @@ hr {
         padding: 0;
         width: 100%;
     }
-
-    .block-name {
-        font-size: 20px;
+    
+    .block-header {
+        font-size: 28px;
+        padding: 0;
+        position: unset;
         text-align: center;
     }
+
+    .block-name {
+        font-size: 18px;
+        font-weight: normal;
+        text-align: center;
+    }
+
+    hr {
+        margin: 8px 0 16px;
+    }
+
+    .location {
+        padding: 4px;
+        font-size: 18px;
+    }
+    
+    .position-name {
+        flex-direction: column;
+        font-size: 14px;
+        font-weight: normal;
+    }
+    
+    .resume-header {
+        flex-direction: column;
+    }
+    
 
     .text-block {
         line-height: 1.5;

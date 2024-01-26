@@ -1,4 +1,5 @@
 ﻿@using Newtonsoft.Json
+@using System.Linq
 @inherits LayoutComponentBase
 @inject HttpClient Http
 
@@ -34,7 +35,7 @@ else
             <div class="bottom-row px-4">
                 @if (_resume.Urls != null)
                 {
-                    <SocialFooter Urls="@_resume.Urls" />
+                    <SocialFooter Urls="@_resume.GetKnownUrls()" />
                 }
             </div>
         </main>
@@ -63,6 +64,21 @@ else
 
     public class Resume
     {
+        private static string[] _knownList = [
+            "facebook",
+            "github",
+            "instagram",
+            "linkedin",
+            "mastodon",
+            "stack-overflow",
+            "substack",
+            "tiktok",
+            "twitch",
+            "twitter",
+            "x",
+            "youtube"
+        ];
+        
         public string? About { get; set; }
 
         public ResumeCertification[]? Certifications { get; set; }
@@ -76,6 +92,16 @@ else
         public string Name { get; set; } = "Unknown";
 
         public ResumeUrl[]? Urls { get; set; }
+        
+        public ResumeUrl[] GetKnownUrls()
+        {
+            return Urls?.Where(i => _knownList.Contains(i.Name)).ToArray() ?? [];
+        }
+        
+        public ResumeUrl[] GetUnknownUrls()
+        {
+            return Urls?.Where(i => !_knownList.Contains(i.Name)).ToArray() ?? [];
+        }
     }
 
     public class ResumeCertification

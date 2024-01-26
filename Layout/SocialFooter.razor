@@ -1,5 +1,8 @@
-﻿<div class="social-container">
-    @foreach (var url in @Urls)
+﻿@inject BrowserService Browser
+@using System.Linq
+
+<div class="social-container">
+    @foreach (var url in _urls ?? [])
     {
         <a class="social-link" href="@url.Link" target="_blank">
             @switch (url.Name)
@@ -76,5 +79,18 @@
     [Parameter]
     public MainLayout.ResumeUrl[] Urls { get; set; } = null!;
 
+    private MainLayout.ResumeUrl[]? _urls;
+    
+    protected override async Task OnParametersSetAsync()
+    {
+        _urls = await GetUrlsForScreen();
+    }    
+    
+    private async Task<MainLayout.ResumeUrl[]> GetUrlsForScreen()
+    {
+        var dimensions = await Browser.GetDimensions();
+        var width = dimensions.Width;
+        return width < 641 ? Urls.Take(5).ToArray() : Urls;
+    }
 }
 
