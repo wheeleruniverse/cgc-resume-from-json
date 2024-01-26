@@ -1,7 +1,16 @@
 ﻿@page "/"
 
 <PageTitle>@Resume.Name</PageTitle>
-<a class="block-header resume-name" href="#">@Resume.Name</a>
+
+<div class="resume-header">
+    <a class="block-header" href="#">@Resume.Name</a>
+    @if (Resume.Location != null)
+    {
+        <a class="location" href="https://maps.google.com?q=@Resume.Location" target="_blank">
+            @Resume.Location
+        </a>
+    }
+</div>
 
 @if (Resume.About != null)
 {
@@ -71,3 +80,4 @@
     public MainLayout.Resume Resume { get; set; } = null!;
 
 }
+

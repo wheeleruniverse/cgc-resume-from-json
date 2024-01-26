@@ -76,6 +76,18 @@ hr {
     margin: 32px 0;
 }
 
+.location {
+    color: #3f4c7f;
+    padding: 8px;
+    font-size: 24px;
+    text-decoration: none;
+}
+
+.location:hover {
+    background-color: #cfd2df;
+    border-radius: 16px;
+}
+
 .position-name {
     color: #3f4c7f;
     display: flex;
@@ -83,7 +95,13 @@ hr {
     justify-content: space-between;
 }
 
-.resume-name {
+.resume-header {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+.resume-header .block-header {
     position: unset;
 }
 

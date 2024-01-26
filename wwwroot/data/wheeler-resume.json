@@ -211,7 +211,58 @@
   ],
   "location": "Grand Rapids, MI",
   "name": "Justin Wheeler",
-  "urls": {
-    "linktree": "https://linktr.ee/wheeleruniverse"
-  }
+  "urls": [
+    {
+      "name": "Blog",
+      "link": "https://dev.to/wheeleruniverse"
+    },
+    {
+      "name": "facebook",
+      "link": "https://www.facebook.com/profile.php?id=100092744310017"
+    },
+    {
+      "name": "github",
+      "link": "https://github.com/wheeleruniverse"
+    },
+    {
+      "name": "instagram",
+      "link": "https://www.instagram.com/wheeleruniverse/"
+    },
+    {
+      "name": "linkedin",
+      "link": "https://linkedin.com/in/wheeleruniverse"
+    },
+    {
+      "name": "mastodon",
+      "link": "https://mastodon.social/@wheeleruniverse"
+    },
+    {
+      "name": "stack-overflow",
+      "link": "https://stackoverflow.com/users/7438853/wheeleruniverse"
+    },
+    {
+      "name": "substack",
+      "link": "https://substack.com/home"
+    },
+    {
+      "name": "tiktok",
+      "link": "https://tiktok.com/@wheeleruniverse"
+    },
+    {
+      "name": "twitch",
+      "link": "https://www.twitch.tv/wheeleruniverse"
+    },
+    {
+      "name": "twitter",
+      "link": "https://twitter.com/wheeleruniverse"
+    },
+    {
+      "name": "x",
+      "link": "https://twitter.com/wheeleruniverse"
+    },
+    {
+      "name": "youtube",
+      "link": "https://www.youtube.com/"
+    }
+  ]
 }
