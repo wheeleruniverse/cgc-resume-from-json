@@ -1,0 +1,13 @@
+
+.social-container {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.social-link {
+    color: #3a0647;
+    text-decoration: none;
+}

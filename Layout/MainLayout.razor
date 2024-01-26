@@ -32,7 +32,10 @@ else
             </article>
             
             <div class="bottom-row px-4">
-                
+                @if (_resume.Urls != null)
+                {
+                    <SocialFooter Urls="@_resume.Urls" />
+                }
             </div>
         </main>
     </div>
@@ -71,6 +74,8 @@ else
         public string? Location { get; set; }
 
         public string Name { get; set; } = "Unknown";
+
+        public ResumeUrl[]? Urls { get; set; }
     }
 
     public class ResumeCertification
@@ -109,6 +114,13 @@ else
     {
         public string Description { get; set; } = "Unknown";
 
+        public string Name { get; set; } = "Unknown";
+
+        public string Link { get; set; } = "https://example.com/";
+    }
+
+    public class ResumeUrl
+    {
         public string Name { get; set; } = "Unknown";
 
         public string Link { get; set; } = "https://example.com/";
