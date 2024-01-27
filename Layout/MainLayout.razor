@@ -64,7 +64,7 @@ else
 
     public class Resume
     {
-        private static string[] _knownList = [
+        private static readonly string[] KnownList = [
             "facebook",
             "github",
             "instagram",
@@ -91,16 +91,18 @@ else
 
         public string Name { get; set; } = "Unknown";
 
+        public ResumeSkillGroup[]? SkillGroups { get; set; }
+
         public ResumeUrl[]? Urls { get; set; }
         
         public ResumeUrl[] GetKnownUrls()
         {
-            return Urls?.Where(i => _knownList.Contains(i.Name)).ToArray() ?? [];
+            return Urls?.Where(i => KnownList.Contains(i.Name)).ToArray() ?? [];
         }
         
         public ResumeUrl[] GetUnknownUrls()
         {
-            return Urls?.Where(i => !_knownList.Contains(i.Name)).ToArray() ?? [];
+            return Urls?.Where(i => !KnownList.Contains(i.Name)).ToArray() ?? [];
         }
     }
 
@@ -143,6 +145,13 @@ else
         public string Name { get; set; } = "Unknown";
 
         public string Link { get; set; } = "https://example.com/";
+    }
+
+    public class ResumeSkillGroup
+    {
+        public string? Name { get; set; }
+
+        public string[] Skills { get; set; } = [];
     }
 
     public class ResumeUrl

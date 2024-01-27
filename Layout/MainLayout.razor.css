@@ -49,13 +49,13 @@ main {
     text-overflow: ellipsis;
 }
 
-@media (max-width: 640.98px) {
-    .bottom-row, .top-row {
+@media (max-width: 640px) {
+    .bottom-row {
         justify-content: space-between;
     }
-
-    .top-row ::deep a, .top-row ::deep .btn-link {
-        margin-left: 0;
+    
+    .top-row {
+        display: none;
     }
 }
 

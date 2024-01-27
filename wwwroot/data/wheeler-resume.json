@@ -211,6 +211,71 @@
   ],
   "location": "Grand Rapids, MI",
   "name": "Justin Wheeler",
+  "skillGroups": [
+    {
+      "name": "Cloud",
+      "skills": [
+        "AWS",
+        "Azure",
+        "GCP"
+      ]
+    },
+    {
+      "name": "IaC",
+      "skills": [
+        "Ansible",
+        "CDK",
+        "CloudFormation",
+        "Pulumi",
+        "Terraform"
+      ]
+    },
+    {
+      "name": "Programming Languages",
+      "skills": [
+        "Bash",
+        "C#",
+        "Go",
+        "Java",
+        "JavaScript",
+        "Python",
+        "SQL",
+        "PL/SQL",
+        "TypeScript"
+      ]
+    },
+    {
+      "name": "Backend Frameworks",
+      "skills": [
+        "C# Blazor",
+        "Java Hibernate",
+        "Java Spring Boot"
+      ]
+    },
+    {
+      "name": "Frontend Frameworks",
+      "skills": [
+        "Angular",
+        "Expo",
+        "jQuery",
+        "Redux",
+        "React",
+        "React Native",
+        "Vue"
+      ]
+    },
+    {
+      "name": "Database",
+      "skills": [
+        "Elasticsearch",
+        "GIS (Spatial)",
+        "MySQL",
+        "Redis",
+        "Oracle",
+        "PostgreSQL"
+      ]
+    }
+  ],
   "urls": [
     {
       "name": "Blog",

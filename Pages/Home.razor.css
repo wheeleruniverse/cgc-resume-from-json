@@ -105,6 +105,34 @@ hr {
     position: unset;
 }
 
+#skills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 48px 0;
+}
+
+.skill-group {
+    background-image: linear-gradient(45deg, rgb(5, 39, 103) 0%, #3a0647 70%);
+    border-radius: 16px;
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+    padding: 4px;
+    margin: 4px;
+    text-align: center;
+}
+
+.skill-list {
+    margin: 4px;
+}
+
+.skill-list span {
+    color: white;
+    font-size: 14px;
+    margin: 4px;
+}
+
 .text-block {
     line-height: 2;
 }
@@ -148,7 +176,26 @@ hr {
         flex-direction: column;
     }
     
+    #skills {
+        flex-direction: column;
+        margin: 16px 0;
+    }
 
+    .skill-group {
+        font-size: 16px;
+    }
+
+    .skill-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 0;
+    }
+
+    .skill-list span {
+        font-size: 12px;
+    }
+    
     .text-block {
         line-height: 1.5;
     }

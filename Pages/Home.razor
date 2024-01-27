@@ -20,6 +20,25 @@
     </div>
 }
 
+@if (Resume.SkillGroups != null)
+{
+    <div id="skills">
+        @foreach (var group in Resume.SkillGroups)
+        {
+            <div class="skill-group">
+                @group.Name
+                <div class="skill-list">
+                    @foreach (var skill in @group.Skills)
+                    {
+                        <span class="skill">@skill</span>
+                    }
+                </div>
+            </div>
+        }
+    </div>
+    <hr/>
+}
+
 @if (Resume.Experience != null)
 {
     <div id="experience">
@@ -79,5 +98,10 @@
     [CascadingParameter]
     public MainLayout.Resume Resume { get; set; } = null!;
 
-}
+    public static IEnumerable<List<T>> Partition<T>(T[] source, Int32 size)
+    {
+        for (int i = 0; i < Math.Ceiling(source.Length / (Double)size); i++)
+            yield return new List<T>(source.Skip(size * i).Take(size));
+    }
 
+}
