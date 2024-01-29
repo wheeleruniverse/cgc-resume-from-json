@@ -49,7 +49,7 @@ main {
     text-overflow: ellipsis;
 }
 
-@media (max-width: 640px) {
+@media (max-width: 1024px) {
     .bottom-row {
         justify-content: space-between;
     }
@@ -59,7 +59,7 @@ main {
     }
 }
 
-@media (min-width: 641px) {
+@media (min-width: 1024px) {
     .bottom-row {
         position: sticky;
         bottom: 0;

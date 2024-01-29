@@ -140,7 +140,7 @@
   "experience": [
     {
       "employer": "Bravo LT",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed lorem auctor, ullamcorper diam id, tempor tellus. Curabitur hendrerit quis purus sit amet tristique. Fusce urna orci, elementum in ex quis, mattis tempor erat. Proin in pretium dui, eget iaculis turpis. Pellentesque fermentum laoreet nulla, at tempus dui rhoncus ut. Vivamus commodo varius semper. Duis fermentum ante id auctor sodales.",
+      "description": "Worked closely with our client Gordon Food Services on their ecommerce platform. Primarily worked as a full stack engineer utilizing Angular 15, NgRx, and TypeScript on the frontend as well as Java 17 Spring Boot on the backend. Our application is hosted on Google Cloud Platform leveraging App Engine, Cloud Datastore, Cloud Storage, and Kubernetes Engine. In order to deliver the required performance we use a combination of Elasticsearch and Redis. Our team has created an impressive CI/CD pipeline composed of GitLab CI, Jenkins, and Spinnaker. Since our code deployments are fully automated we rely heavily on various testing methods including end-to-end, integration, performance, and unit.",
       "link": "https://www.bravolt.com/",
       "start": "2021-04-01",
       "title": "Senior Software Developer Consultant",
@@ -148,7 +148,7 @@
     },
     {
       "employer": "Verizon",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed lorem auctor, ullamcorper diam id, tempor tellus. Curabitur hendrerit quis purus sit amet tristique. Fusce urna orci, elementum in ex quis, mattis tempor erat. Proin in pretium dui, eget iaculis turpis. Pellentesque fermentum laoreet nulla, at tempus dui rhoncus ut. Vivamus commodo varius semper. Duis fermentum ante id auctor sodales.",
+      "description": "Worked as a leader for our on-premises to AWS migration. Created architectural diagrams to share the cloud state we were working towards as well as explained AWS decisions and services to the team. Used Ansible, CloudFormation, and Jenkins to create cloud infrastructure. Used bash, the AWS CLI, and Jenkins to automate repetitive tasks. Optimized, secured, and maintained AWS environments throughout the migration process. Finally, performed cost optimization on AWS environments constantly. Helped monitor and report cloud costs to organization leaders on a regular cadence.",
       "link": "https://www.verizon.com/",
       "start": "2020-03-01",
       "title": "Cloud Architect",
@@ -156,31 +156,23 @@
     },
     {
       "employer": "Verizon",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed lorem auctor, ullamcorper diam id, tempor tellus. Curabitur hendrerit quis purus sit amet tristique. Fusce urna orci, elementum in ex quis, mattis tempor erat. Proin in pretium dui, eget iaculis turpis. Pellentesque fermentum laoreet nulla, at tempus dui rhoncus ut. Vivamus commodo varius semper. Duis fermentum ante id auctor sodales.",
-      "link": "https://www.verizon.com/",
-      "start": "2020-03-01",
-      "title": "Cloud Architect",
-      "until": "2021-04-01"
-    },
-    {
-      "employer": "Verizon",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed lorem auctor, ullamcorper diam id, tempor tellus. Curabitur hendrerit quis purus sit amet tristique. Fusce urna orci, elementum in ex quis, mattis tempor erat. Proin in pretium dui, eget iaculis turpis. Pellentesque fermentum laoreet nulla, at tempus dui rhoncus ut. Vivamus commodo varius semper. Duis fermentum ante id auctor sodales.",
-      "link": "https://www.verizon.com/",
+      "description": "Worked on a large team to generate a 5G coverage map and support our internal network applications. Designed and implemented backend logic including API specifications and database elements. Used Java 8 Spring Boot, PostgreSQL, and MySQL databases with GIS plug-ins for spatial operators. Additionally used Python for automation and quick ad-hoc work. Served as a gate keeper to our code repositories and as a mentor to our junior team members. Handled on call, code upgrades, and escalations.",
+      "link": "https://www.verizon.com/coverage-map/",
       "start": "2019-11-01",
       "title": "Full Stack Engineer",
       "until": "2020-03-01"
     },
     {
       "employer": "Verizon",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed lorem auctor, ullamcorper diam id, tempor tellus. Curabitur hendrerit quis purus sit amet tristique. Fusce urna orci, elementum in ex quis, mattis tempor erat. Proin in pretium dui, eget iaculis turpis. Pellentesque fermentum laoreet nulla, at tempus dui rhoncus ut. Vivamus commodo varius semper. Duis fermentum ante id auctor sodales.",
-      "link": "https://www.verizon.com/",
+      "description": "Worked on a small team to support 5G customer qualification problem that would reduce technician visits for homes that are unavailable to get 5G signal. Personally designed and implemented backend logic for the product that was integrated by the dotcom team that controlled verizon.com. Used Java 8 Spring Boot, PostgreSQL, and MySQL databases with GIS plug-ins for spatial operators. Coordinated API communication across numerous teams in order to deliver the product.",
+      "link": "https://www.verizon.com/5g/home/",
       "start": "2017-08-01",
       "title": "Java Software Engineer",
       "until": "2019-11-01"
     },
     {
       "employer": "Verizon",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed lorem auctor, ullamcorper diam id, tempor tellus. Curabitur hendrerit quis purus sit amet tristique. Fusce urna orci, elementum in ex quis, mattis tempor erat. Proin in pretium dui, eget iaculis turpis. Pellentesque fermentum laoreet nulla, at tempus dui rhoncus ut. Vivamus commodo varius semper. Duis fermentum ante id auctor sodales.",
+      "description": "Quickly came up to speed on existing code, databases, and technology used. Started migrating massive code repositories from Java 7 to Java 8 where applicable and close gaps in jUnit coverage. Worked on a small team responsible for remotely configuring radio tower equipment to eliminate technician trips and reduce turn around for radio tower equipment configuration. Used Java 8 Spring Boot, MySQL, and Oracle.",
       "link": "https://www.verizon.com/",
       "start": "2016-10-01",
       "title": "Java Developer Contractor",

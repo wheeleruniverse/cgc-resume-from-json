@@ -79,18 +79,24 @@
     [Parameter]
     public MainLayout.ResumeUrl[] Urls { get; set; } = null!;
 
+    private BrowserScreenSize? ScreenSize { get; set; }
+
     private MainLayout.ResumeUrl[]? _urls;
-    
+
     protected override async Task OnParametersSetAsync()
     {
         _urls = await GetUrlsForScreen();
-    }    
-    
+    }
+
     private async Task<MainLayout.ResumeUrl[]> GetUrlsForScreen()
     {
-        var dimensions = await Browser.GetDimensions();
-        var width = dimensions.Width;
-        return width < 641 ? Urls.Take(5).ToArray() : Urls;
+        var screen = await Browser.GetScreenSize();
+        return screen switch
+        {
+            BrowserScreenSize.Tablet => Urls.Take(7).ToArray(),
+            BrowserScreenSize.Mobile => Urls.Take(5).ToArray(),
+            _ => Urls
+        };
     }
-}
 
+}

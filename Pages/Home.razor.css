@@ -123,12 +123,17 @@ hr {
     text-align: center;
 }
 
+.skill-group:hover {
+    background-color: #cfd2df;
+    background-image: unset;
+    color: black;
+}
+
 .skill-list {
     margin: 4px;
 }
 
 .skill-list span {
-    color: white;
     font-size: 14px;
     margin: 4px;
 }
@@ -137,7 +142,7 @@ hr {
     line-height: 2;
 }
 
-@media (max-width: 641px) {
+@media (max-width: 768px) {
     .block {
         border: none !important;
         padding: 0;

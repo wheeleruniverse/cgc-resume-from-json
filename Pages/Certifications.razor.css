@@ -7,3 +7,13 @@
     background-color: #efefef;
     cursor: pointer;
 }
+
+@media (max-width: 768px) {
+    .table {
+        font-size: 12px;
+    }
+    
+    .table td:first-child {
+        width: 50%;
+    }
+}

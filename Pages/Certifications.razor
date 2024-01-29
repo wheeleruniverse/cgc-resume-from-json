@@ -1,38 +1,78 @@
 ﻿@page "/certifications"
+@inject BrowserService Browser
 @inject IJSRuntime JsRuntime
 
 <PageTitle>Certifications</PageTitle>
 
-<table class="table">
-    <thead>
-    <tr>
-        <th>Vendor</th>
-        <th>Level</th>
-        <th>Name</th>
-        <th>Id</th>
-        <th>Issue Date</th>
-        <th>Expiry Date</th>
-    </tr>
-    </thead>
-    <tbody>
-    @foreach (var certification in Resume.Certifications ?? [])
-    {
-        <tr @onclick="_ => ClickCertification(certification.Link)">
-            <td>@certification.Vendor</td>
-            <td>@certification.Level</td>
-            <td>@certification.Name</td>
-            <td>@certification.Id</td>
-            <td>@certification.Issue</td>
-            <td>@certification.Expiry</td>
-        </tr>
-    }
-    </tbody>
-</table>
+@switch (ScreenSize)
+{
+    case null:
+        <table class="table"></table>
+        break;
+    case BrowserScreenSize.Tablet:
+    case BrowserScreenSize.Mobile:
+        <table class="table">
+            <thead>
+            <tr>
+                <th>Name</th>
+                <th>Issue</th>
+                <th>Expiry</th>
+            </tr>
+            </thead>
+            <tbody>
+            @foreach (var certification in Resume.Certifications ?? [])
+            {
+                <tr @onclick="_ => ClickCertification(certification.Link)">
+                    <td>@certification.Vendor&nbsp;@certification.Name</td>
+                    <td>@certification.Issue</td>
+                    <td>@certification.Expiry</td>
+                </tr>
+            }
+            </tbody>
+        </table>
+        break;
+    case BrowserScreenSize.Desktop:
+    default:
+        <table class="table">
+            <thead>
+            <tr>
+                <th>Vendor</th>
+                <th>Level</th>
+                <th>Name</th>
+                <th>Id</th>
+                <th>Issue Date</th>
+                <th>Expiry Date</th>
+            </tr>
+            </thead>
+            <tbody>
+            @foreach (var certification in Resume.Certifications ?? [])
+            {
+                <tr @onclick="_ => ClickCertification(certification.Link)">
+                    <td>@certification.Vendor</td>
+                    <td>@certification.Level</td>
+                    <td>@certification.Name</td>
+                    <td>@certification.Id</td>
+                    <td>@certification.Issue</td>
+                    <td>@certification.Expiry</td>
+                </tr>
+            }
+            </tbody>
+        </table>
+        break;
+}
+
 
 @code {
 
     [CascadingParameter]
     public MainLayout.Resume Resume { get; set; } = null!;
+
+    private BrowserScreenSize? ScreenSize { get; set; }
+
+    protected override async Task OnParametersSetAsync()
+    {
+        ScreenSize = await Browser.GetScreenSize();
+    }
 
     private async void ClickCertification(string link)
     {
