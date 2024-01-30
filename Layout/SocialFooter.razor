@@ -2,7 +2,7 @@
 @using System.Linq
 
 <div class="social-container">
-    @foreach (var url in _urls ?? [])
+    @foreach (var url in _urls ?? Array.Empty<MainLayout.ResumeUrl>())
     {
         <a class="social-link" href="@url.Link" target="_blank">
             @switch (url.Name)

@@ -31,11 +31,11 @@ else
                     @Body
                 </CascadingValue>
             </article>
-            
+
             <div class="bottom-row px-4">
                 @if (_resume.Urls != null)
                 {
-                    <SocialFooter Urls="@_resume.GetKnownUrls()" />
+                    <SocialFooter Urls="@_resume.GetKnownUrls()"/>
                 }
             </div>
         </main>
@@ -64,7 +64,8 @@ else
 
     public class Resume
     {
-        private static readonly string[] KnownList = [
+        private static readonly string[] KnownList =
+        {
             "facebook",
             "github",
             "instagram",
@@ -77,8 +78,8 @@ else
             "twitter",
             "x",
             "youtube"
-        ];
-        
+        };
+
         public string? About { get; set; }
 
         public ResumeCertification[]? Certifications { get; set; }
@@ -94,15 +95,15 @@ else
         public ResumeSkillGroup[]? SkillGroups { get; set; }
 
         public ResumeUrl[]? Urls { get; set; }
-        
+
         public ResumeUrl[] GetKnownUrls()
         {
-            return Urls?.Where(i => KnownList.Contains(i.Name)).ToArray() ?? [];
+            return Urls?.Where(i => KnownList.Contains(i.Name)).ToArray() ?? Array.Empty<ResumeUrl>();
         }
-        
+
         public ResumeUrl[] GetUnknownUrls()
         {
-            return Urls?.Where(i => !KnownList.Contains(i.Name)).ToArray() ?? [];
+            return Urls?.Where(i => !KnownList.Contains(i.Name)).ToArray() ?? Array.Empty<ResumeUrl>();
         }
     }
 
@@ -151,7 +152,7 @@ else
     {
         public string? Name { get; set; }
 
-        public string[] Skills { get; set; } = [];
+        public string[] Skills { get; set; } = Array.Empty<string>();
     }
 
     public class ResumeUrl

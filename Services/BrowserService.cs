@@ -1,7 +1,14 @@
 using Microsoft.JSInterop;
 
-public class BrowserService(IJSRuntime js)
+public class BrowserService
 {
+    private readonly IJSRuntime _js;
+
+    public BrowserService(IJSRuntime js)
+    {
+        _js = js;
+    }
+    
     public async Task<BrowserScreenSize> GetScreenSize()
     {
         var dimensions = await GetDimensions();
@@ -15,7 +22,7 @@ public class BrowserService(IJSRuntime js)
     
     private async Task<BrowserDimension> GetDimensions()
     {
-        return await js.InvokeAsync<BrowserDimension>("getDimensions");
+        return await _js.InvokeAsync<BrowserDimension>("getDimensions");
     }
 }
 

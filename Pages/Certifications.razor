@@ -20,7 +20,7 @@
             </tr>
             </thead>
             <tbody>
-            @foreach (var certification in Resume.Certifications ?? [])
+            @foreach (var certification in Resume.Certifications ?? Array.Empty<MainLayout.ResumeCertification>())
             {
                 <tr @onclick="_ => ClickCertification(certification.Link)">
                     <td>@certification.Vendor&nbsp;@certification.Name</td>
@@ -31,7 +31,6 @@
             </tbody>
         </table>
         break;
-    case BrowserScreenSize.Desktop:
     default:
         <table class="table">
             <thead>
@@ -45,7 +44,7 @@
             </tr>
             </thead>
             <tbody>
-            @foreach (var certification in Resume.Certifications ?? [])
+            @foreach (var certification in Resume.Certifications ?? Array.Empty<MainLayout.ResumeCertification>())
             {
                 <tr @onclick="_ => ClickCertification(certification.Link)">
                     <td>@certification.Vendor</td>
