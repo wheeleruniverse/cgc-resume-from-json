@@ -2,6 +2,7 @@
 @using System.Linq
 @inherits LayoutComponentBase
 @inject HttpClient Http
+@inject VercelBlobService VercelBlob
 
 @if (_resume == null)
 {
@@ -57,7 +58,10 @@ else
         await file.OpenReadStream().ReadAsync(buffer);
 
         var content = System.Text.Encoding.UTF8.GetString(buffer);
-        _resume = JsonConvert.DeserializeObject<MainLayout.Resume>(content);
+        
+        VercelBlob.Put(System.Guid.NewGuid().ToString(), content);
+        
+        _resume = JsonConvert.DeserializeObject<Resume>(content);
 
         StateHasChanged();
     }

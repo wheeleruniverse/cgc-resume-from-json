@@ -24,13 +24,25 @@
     <a class="dismiss">🗙</a>
 </div>
 <script src="_framework/blazor.webassembly.js"></script>
+<script src="js/index.bundle.js"></script>
 <script type="text/javascript">
+    import { put } from "@vercel/blob";
+    
     window.getDimensions = function () {
         return {
             width: window.innerWidth,
             height: window.innerHeight
         };
-    };
+    }
+    
+    window.vercelBlobPut = async function (pathname, body){
+        await put(pathname, body, { 
+            access: 'public', 
+            addRandomSuffix: false,
+            contentType: 'application/json' 
+        });
+    }
+    
 </script>
 </body>
 </html>
