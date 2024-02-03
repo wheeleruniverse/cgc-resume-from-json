@@ -9,8 +9,8 @@ public class BlobService
         _js = js;
     }
     
-    public async void Put(String pathname, String contents)
+    public async void Put(String path, String body)
     {
-        await _js.InvokeVoidAsync("NpmJs.BlobServicePut", pathname, contents);
+        await _js.InvokeVoidAsync("NpmJs.BlobServicePut", path, body);
     }
 }

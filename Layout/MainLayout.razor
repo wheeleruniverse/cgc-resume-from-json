@@ -23,6 +23,18 @@ else
                         <InputFile OnChange="@UpdateResume" class="d-none"/>
                         Import Your Resume
                     </label>
+                    @if (_importGuid != null)
+                    { 
+                        <span>
+                            Share Id @_importGuid
+                        </span>
+                    }
+                    else
+                    {
+                        <span class="placeholder">
+                            Share Id 00000000-0000-0000-0000-000000000000
+                        </span>
+                    }
                 </div>
                 <a href="https://github.com/wheeleruniverse/cgc-resume-from-json" target="_blank">GitHub</a>
             </div>
@@ -45,6 +57,7 @@ else
 
 @code {
     private Resume? _resume;
+    private string? _importGuid;
 
     protected override async Task OnInitializedAsync()
     {
@@ -58,8 +71,9 @@ else
         await file.OpenReadStream().ReadAsync(buffer);
 
         var content = System.Text.Encoding.UTF8.GetString(buffer);
+        _importGuid = Guid.NewGuid().ToString();
         
-        Blob.Put(System.Guid.NewGuid().ToString(), content);
+        Blob.Put($"{_importGuid}.json", content);
         
         _resume = JsonConvert.DeserializeObject<Resume>(content);
 
@@ -165,5 +179,4 @@ else
 
         public string Link { get; set; } = "https://example.com/";
     }
-
 }
