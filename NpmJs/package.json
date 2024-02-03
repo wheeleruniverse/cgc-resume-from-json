@@ -6,10 +6,12 @@
     "build": "webpack ./index.js --mode production --output-path ../wwwroot/js --output-filename index.bundle.js"
   },
   "dependencies": {
-    "@vercel/blob": "^0.20.0"
-  },
-  "devDependencies": {
+    "@vercel/blob": "^0.20.0",
     "webpack": "^5.90.1",
     "webpack-cli": "^5.1.4"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.23.9",
+    "babel-loader": "^9.1.3"
   }
 }

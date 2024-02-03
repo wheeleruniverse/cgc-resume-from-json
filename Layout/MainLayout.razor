@@ -1,8 +1,8 @@
 ﻿@using Newtonsoft.Json
 @using System.Linq
 @inherits LayoutComponentBase
+@inject BlobService Blob
 @inject HttpClient Http
-@inject VercelBlobService VercelBlob
 
 @if (_resume == null)
 {
@@ -59,7 +59,7 @@ else
 
         var content = System.Text.Encoding.UTF8.GetString(buffer);
         
-        VercelBlob.Put(System.Guid.NewGuid().ToString(), content);
+        Blob.Put(System.Guid.NewGuid().ToString(), content);
         
         _resume = JsonConvert.DeserializeObject<Resume>(content);
 
