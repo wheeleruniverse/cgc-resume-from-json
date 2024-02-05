@@ -23,6 +23,8 @@
     <_ContentIncludedByDefault Remove="Publish\web.config" />
     <_ContentIncludedByDefault Remove="Publish\wwwroot\data\wheeler-resume.json" />
     <_ContentIncludedByDefault Remove="Publish\wwwroot\_framework\blazor.boot.json" />
+    <_ContentIncludedByDefault Remove="Publish\NpmJs\package-lock.json" />
+    <_ContentIncludedByDefault Remove="Publish\NpmJs\package.json" />
   </ItemGroup>
 
   <ItemGroup>
