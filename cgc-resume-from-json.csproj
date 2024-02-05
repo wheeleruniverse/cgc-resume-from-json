@@ -20,6 +20,18 @@
 
   <ItemGroup>
     <_ContentIncludedByDefault Remove="Components\Tooltip.razor" />
+    <_ContentIncludedByDefault Remove="Publish\web.config" />
+    <_ContentIncludedByDefault Remove="Publish\wwwroot\data\wheeler-resume.json" />
+    <_ContentIncludedByDefault Remove="Publish\wwwroot\_framework\blazor.boot.json" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Include="wwwroot\.gitignore" />
+  </ItemGroup>
+  
+  <Target Name="PreBuild" BeforeTargets="PreBuildEvent">
+    <Exec Command="npm install" WorkingDirectory="NpmJs" />
+    <Exec Command="npm run build" WorkingDirectory="NpmJs" />
+  </Target>
+  
 </Project>
