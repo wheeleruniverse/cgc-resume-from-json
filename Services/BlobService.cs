@@ -11,6 +11,10 @@ public class BlobService
     
     public async void Put(String path, String body)
     {
-        await _js.InvokeVoidAsync("NpmJs.BlobServicePut", path, body);
+        var token = Environment.GetEnvironmentVariable("BLOB_READ_WRITE_TOKEN");
+        if (token != null)
+        {
+            await _js.InvokeVoidAsync("NpmJs.BlobServicePut", path, body, token);
+        }
     }
 }
