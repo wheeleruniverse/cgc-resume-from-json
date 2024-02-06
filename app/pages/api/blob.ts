@@ -6,8 +6,10 @@ type BlobFailureResponse = {
   error: any;
 };
 type BlobSuccessResponse = {
-  download: string;
-  filename: string;
+  id: string;
+  downloadUrl: string;
+  pathname: string;
+  url: string;
 };
 
 export default async function handler(
@@ -49,8 +51,8 @@ async function getBlob(
     sendError(res, 404);
     return;
   }
-  const { downloadUrl, pathname } = result.blobs[0];
-  res.status(200).send({ download: downloadUrl, filename: pathname });
+  const { downloadUrl, pathname, url } = result.blobs[0];
+  res.status(200).send({ id, downloadUrl, pathname, url });
 }
 
 async function putBlob(
@@ -61,15 +63,16 @@ async function putBlob(
     sendError(res, 400);
     return;
   }
-  const filename = `${crypto.randomUUID()}.json`;
+  const id = crypto.randomUUID();
   const options: PutCommandOptions = {
     access: 'public',
     addRandomSuffix: false,
     contentType: 'application/json',
   };
   try {
-    const result = await put(filename, JSON.stringify(req.body), options);
-    res.status(200).json({ download: result.downloadUrl, filename });
+    const result = await put(`${id}.json`, JSON.stringify(req.body), options);
+    const { downloadUrl, pathname, url } = result;
+    res.status(200).json({ id, downloadUrl, pathname, url });
   } catch (error) {
     console.log(error);
     sendError(res, 500);
