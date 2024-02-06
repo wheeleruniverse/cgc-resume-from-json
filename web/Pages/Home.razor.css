@@ -1,4 +1,8 @@
 
+*[id] {
+    scroll-margin-top: 5rem;
+}
+
 .block {
     background-color: white;
     border-bottom: 1px solid #102060;

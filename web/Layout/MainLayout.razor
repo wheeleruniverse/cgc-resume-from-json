@@ -3,7 +3,6 @@
 @inject NavigationManager NavManager
 @using Newtonsoft.Json
 @using System.Linq
-@using System.Text.RegularExpressions
 
 @if (_resume == null)
 {
@@ -29,6 +28,10 @@ else
                         <a href="?id=@_importGuid" target="_blank">
                             Share Url
                         </a>
+                    }
+                    else
+                    {
+                        <a class="placeholder">Share Url</a>
                     }
                 </div>
                 <a href="https://github.com/wheeleruniverse/cgc-resume-from-json" target="_blank">GitHub</a>
