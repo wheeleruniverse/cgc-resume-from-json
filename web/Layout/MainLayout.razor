@@ -1,8 +1,9 @@
-﻿@using Newtonsoft.Json
-@using System.Linq
-@inherits LayoutComponentBase
-@inject BlobService Blob
+﻿@inherits LayoutComponentBase
 @inject HttpClient Http
+@inject NavigationManager NavManager
+@using Newtonsoft.Json
+@using System.Linq
+@using System.Text.RegularExpressions
 
 @if (_resume == null)
 {
@@ -24,16 +25,10 @@ else
                         Import Your Resume
                     </label>
                     @if (_importGuid != null)
-                    { 
-                        <span>
-                            Share Id @_importGuid
-                        </span>
-                    }
-                    else
                     {
-                        <span class="placeholder">
-                            Share Id 00000000-0000-0000-0000-000000000000
-                        </span>
+                        <a href="?id=@_importGuid" target="_blank">
+                            Share Url
+                        </a>
                     }
                 </div>
                 <a href="https://github.com/wheeleruniverse/cgc-resume-from-json" target="_blank">GitHub</a>
@@ -56,12 +51,27 @@ else
 }
 
 @code {
+    private const string BlobApiUrl = "https://cgc-resume-from-json-api.vercel.app/api/blob";
+
     private Resume? _resume;
     private string? _importGuid;
 
     protected override async Task OnInitializedAsync()
     {
-        _resume = await Http.GetFromJsonAsync<Resume>("data/wheeler-resume.json");
+        var query = NavManager.ToAbsoluteUri(NavManager.Uri).Query;
+        if (query.Contains("?id="))
+        {
+            var id = query.Substring(4);
+            var httpResponse = await Http.GetAsync($"{BlobApiUrl}?id={id}");
+            if (httpResponse.IsSuccessStatusCode)
+            {
+                var blobResponse = await httpResponse.Content.ReadFromJsonAsync<BlobResponse>();
+                _resume = await Http.GetFromJsonAsync<Resume>(blobResponse?.Url);
+                _importGuid = id;
+            }
+        }
+
+        _resume ??= await Http.GetFromJsonAsync<Resume>("data/wheeler-resume.json");
     }
 
     private async void UpdateResume(InputFileChangeEventArgs e)
@@ -70,14 +80,29 @@ else
         var buffer = new byte[file.Size];
         await file.OpenReadStream().ReadAsync(buffer);
 
-        var content = System.Text.Encoding.UTF8.GetString(buffer);
-        _importGuid = Guid.NewGuid().ToString();
-        
-        Blob.Put($"{_importGuid}.json", content);
-        
-        _resume = JsonConvert.DeserializeObject<Resume>(content);
+        var stringFromBuffer = System.Text.Encoding.UTF8.GetString(buffer);
+        _resume = JsonConvert.DeserializeObject<Resume>(stringFromBuffer);
+
+        var httpContent = JsonContent.Create(_resume);
+        var httpResponse = await Http.PutAsync(BlobApiUrl, httpContent);
+        if (httpResponse.IsSuccessStatusCode)
+        {
+            var blobResponse = await httpResponse.Content.ReadFromJsonAsync<BlobResponse>();
+            _importGuid = blobResponse?.Id;
+        }
 
         StateHasChanged();
+    }
+
+    public class BlobResponse
+    {
+        public string? Id { get; set; }
+
+        public string? DownloadUrl { get; set; }
+
+        public string? Pathname { get; set; }
+
+        public string? Url { get; set; }
     }
 
     public class Resume
@@ -179,4 +204,5 @@ else
 
         public string Link { get; set; } = "https://example.com/";
     }
+
 }

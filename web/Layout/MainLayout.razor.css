@@ -55,10 +55,6 @@ main {
     justify-content: space-between;
 }
 
-.import .placeholder {
-    visibility: hidden;
-}
-
 @media (max-width: 1024px) {
     .bottom-row {
         justify-content: space-between;

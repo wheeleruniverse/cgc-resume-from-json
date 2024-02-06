@@ -25,15 +25,12 @@
     <_ContentIncludedByDefault Remove="Publish\wwwroot\_framework\blazor.boot.json" />
     <_ContentIncludedByDefault Remove="Publish\NpmJs\package-lock.json" />
     <_ContentIncludedByDefault Remove="Publish\NpmJs\package.json" />
+    <_ContentIncludedByDefault Remove="NpmJs\package-lock.json" />
+    <_ContentIncludedByDefault Remove="NpmJs\package.json" />
   </ItemGroup>
 
   <ItemGroup>
     <None Include="wwwroot\.gitignore" />
   </ItemGroup>
-  
-  <Target Name="PreBuild" BeforeTargets="PreBuildEvent">
-    <Exec Command="npm install" WorkingDirectory="NpmJs" />
-    <Exec Command="npm run build" WorkingDirectory="NpmJs" />
-  </Target>
   
 </Project>

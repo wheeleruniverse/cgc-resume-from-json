@@ -97,11 +97,4 @@
 
     [CascadingParameter]
     public MainLayout.Resume Resume { get; set; } = null!;
-
-    public static IEnumerable<List<T>> Partition<T>(T[] source, Int32 size)
-    {
-        for (int i = 0; i < Math.Ceiling(source.Length / (Double)size); i++)
-            yield return new List<T>(source.Skip(size * i).Take(size));
-    }
-
 }

@@ -22,7 +22,7 @@ public class BrowserService
     
     private async Task<BrowserDimension> GetDimensions()
     {
-        return await _js.InvokeAsync<BrowserDimension>("NpmJs.BrowserServiceGetDimensions");
+        return await _js.InvokeAsync<BrowserDimension>("BrowserServiceGetDimensions");
     }
 }
 
