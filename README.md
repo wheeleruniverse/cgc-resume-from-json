@@ -1,5 +1,3 @@
-![Vercel Deploy](https://deploy-badge.vercel.app/vercel/cgc-resume-from-json?style=for-the-badge)
-
 # Resume from JSON -- Code Portfolio Challenge
 
 A dynamic resume website built with Blazor and Next.js, deployed on Vercel. This project converts JSON resume data into a beautiful, responsive web presentation with sharing capabilities.
